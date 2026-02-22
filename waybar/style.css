@@ -13,7 +13,7 @@ window#waybar {
     background: transparent;
 }
 
-/* Galvenie moduļi ar FIKSĒTU violetu krāsu */
+
 #tags,
 #cpu,
 #memory,
@@ -22,21 +22,21 @@ window#waybar {
 #network,
 #battery,
 #window {
-background-color: #8839ef; /* Šī ir konkrēta violetā krāsa */
-color: #ffffff;            /* Balts teksts labākai redzamībai */
+background-color: #8839ef; 
+color: #ffffff;            
 border-radius: 5px;
 padding: 2px 10px;
 font-weight: bold;
 opacity: 0.9;
-box-shadow: 0 0 10px #c6a0f6; /* Violets spīdums */
+box-shadow: 0 0 10px #c6a0f6; 
 }
 
-/* Atstarpes starp moduļiem */
+
 #cpu, #memory, #pulseaudio, #network, #tags {
 margin-left: 5px;
 }
 
-/* --- River Tags Stils --- */
+/* --- River Tags style --- */
 
 #tags button {
 color: #ffffff;
@@ -46,7 +46,7 @@ border-radius: 5px;
 transition: all 0.3s ease;
 }
 
-/* Aktīvais tags - melns fons, violeti cipari */
+
 #tags button.focused {
 background: #1e1e2e;
 color: #c6a0f6;
@@ -63,11 +63,11 @@ background: rgba(255, 255, 255, 0.2);
 box-shadow: 0 0 10px white;
 }
 
-/* --- Speciālie moduļi --- */
+
 #custom-exit,
 #custom-reboot,
 #custom-power {
-background-color: #f38ba8; /* Sarkans Power pogai */
+background-color: #f38ba8; 
 color: #ffffff;
 box-shadow: 0 0 8px #f38ba8;
 border-radius: 5px;
