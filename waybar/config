@@ -8,7 +8,7 @@
     "spacing": 15,
 
     "modules-left": ["river/tags", "river/window", "cpu"],
-    "modules-center": ["clock"],
+    "modules-center": ["clock", "wlr/taskbar"],
     "modules-right": ["custom/obs", "pulseaudio", "network", "battery", "custom/exit", "custom/reboot", "custom/power"],
 
     "river/tags": {
@@ -18,6 +18,13 @@
 
     "river/window": {
         "max-length": 20
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 16,
+        "spacing": 5,
+        "on-click-middle": "close",
+        "on-click": "activate"
     },
 
     "clock": {
