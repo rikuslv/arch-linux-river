@@ -1,0 +1,81 @@
+// Waybar configuration for River on Arch Linux
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 15,
+
+    "modules-left": ["river/tags", "river/window", "cpu"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/obs", "pulseaudio", "network", "battery", "custom/exit", "custom/reboot", "custom/power"],
+
+    "river/tags": {
+        "num-tags": 9,
+        "tag-labels": ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    },
+
+    "river/window": {
+        "max-length": 20
+    },
+
+    "clock": {
+        "format": "{:%d.%m | %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "MEM {used}G"
+    },
+
+    "custom/obs": {
+        "format": "{}",
+        "return-type": "json",
+        "interval": 2,
+        "exec": "$HOME/.config/waybar/scripts/obs_status.sh",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "  Muted",
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " ", " "]
+        }
+    },
+
+    "custom/exit": {
+        "format": "󰈆 ",
+        "on-click": "riverctl exit",
+        "tooltip": true,
+        "tooltip-format": "logout"
+    },
+
+    "custom/reboot": {
+        "format": "󰜉 ",
+        "on-click": "systemctl reboot",
+        "tooltip": true,
+        "tooltip-format": "reboot"
+    },
+
+    "custom/power": {
+        "format": " ",
+        "on-click": "systemctl poweroff",
+        "tooltip": true,
+        "tooltip-format": "poweroff"
+    }
+}

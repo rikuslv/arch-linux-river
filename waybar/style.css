@@ -1,0 +1,101 @@
+/* English comment: Using hardcoded hex colors instead of @color5
+ *  to bypass pywal issues and force a violet theme. */
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* Galvenie moduļi ar FIKSĒTU violetu krāsu */
+#tags,
+#cpu,
+#memory,
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#window {
+background-color: #8839ef; /* Šī ir konkrēta violetā krāsa */
+color: #ffffff;            /* Balts teksts labākai redzamībai */
+border-radius: 5px;
+padding: 2px 10px;
+font-weight: bold;
+opacity: 0.9;
+box-shadow: 0 0 10px #c6a0f6; /* Violets spīdums */
+}
+
+/* Atstarpes starp moduļiem */
+#cpu, #memory, #pulseaudio, #network, #tags {
+margin-left: 5px;
+}
+
+/* --- River Tags Stils --- */
+
+#tags button {
+color: #ffffff;
+padding: 0 5px;
+margin: 0 2px;
+border-radius: 5px;
+transition: all 0.3s ease;
+}
+
+/* Aktīvais tags - melns fons, violeti cipari */
+#tags button.focused {
+background: #1e1e2e;
+color: #c6a0f6;
+opacity: 1;
+}
+
+#tags button.occupied {
+background: rgba(0, 0, 0, 0.3);
+border-bottom: 2px solid #ffffff;
+}
+
+#tags button:hover {
+background: rgba(255, 255, 255, 0.2);
+box-shadow: 0 0 10px white;
+}
+
+/* --- Speciālie moduļi --- */
+#custom-exit,
+#custom-reboot,
+#custom-power {
+background-color: #f38ba8; /* Sarkans Power pogai */
+color: #ffffff;
+box-shadow: 0 0 8px #f38ba8;
+border-radius: 5px;
+padding: 2px 10px;
+opacity: 0.9;
+}
+
+#window {
+margin-left: 10px;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#custom-obs {
+color: #ffffff;
+background-color: #f38ba8;
+border-radius: 5px;
+padding: 2px 10px;
+margin-right: 10px;
+font-weight: bold;
+box-shadow: 0 0 8px #f38ba8;
+animation: blink 1s linear infinite alternate;
+}
+
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0.3; }
+}
