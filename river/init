@@ -70,4 +70,4 @@ riverctl spawn "rivertile -view-padding 5 -outer-padding 5"
 
 # Status bar and Wallpaper (ensure you have waybar and swaybg installed)
 pkill waybar; riverctl spawn waybar
-pkill swaybg; riverctl spawn "swaybg -m fill -i /home/rgra/Pictures/Wallpapers/girl.jpg"
+pkill swaybg; riverctl spawn "swaybg -m fill -i /home/user/Pictures/Wallpapers/girl.jpg"
