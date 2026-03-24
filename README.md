@@ -7,4 +7,4 @@
 
 <img width="1914" height="935" alt="image" src="https://github.com/user-attachments/assets/05cbae07-b918-4aae-88d4-4da9ee6992dd" />
 
-
+I also use AI
